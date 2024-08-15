@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+}
+.main{
+    width: 100%;
+    height: 100%;
+    background: rgb(172, 232, 172);
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+}
+.panel{
+    overflow: hidden;
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+    background: #fff;
+}
+.panel .ptop{
+    padding: 0 30%;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    background: rgb(60, 173, 60);
+}
+.elem{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #fff;
+}
+.elem .box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 70px;
+    background: #fff;
+    color: green;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 10px 25px;
+    border-radius: 5px;
+}
+.pbtm{
+    width: 100%;
+    height: calc(100% - 80px);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px 30px;
+    justify-content: center;
+    align-items: center;
+}
+.bubble{
+    width: 50px;
+    height: 50px;
+    border-radius:50%;
+    background: green;
+    color: #fff;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.bubble:hover{
+    opacity: 0.8;
+}
+.gameover{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.gameover h1{
+    color: red;
+}
+.instructions{
+    width: 45%;
+    height: 60%;
+    border: 2px solid green;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    background: rgb(172, 232, 172);
+}
+.instructions *{
+    margin-bottom: 20px;
+}
+.instructions p{
+    font-size: 20px;
+}
+#restart,#start,#home{
+    padding: 8px 20px;
+    font-size: 20px;
+    border-radius: 8px;
+    color: green;
+    cursor: pointer;
+    transition:all ease-in-out 0.3s;
+}
+#home{
+    padding: 80 24px;
+    margin-left: 15px;
+}
+#restart:hover,#start:hover,#home:hover{
+    background:  rgb(60, 173, 60);
+    color: #fff;
+}
+@media (max-width:1200px) {
+    .panel .ptop{
+        padding: 0 10%;
+        justify-content: space-between;
+    }
+    
+    .instructions{
+        width: 85%;
+        height: 60%;
+    }
+}
+@media (max-width:600px) {
+    .panel{
+        width: 100%;
+        height: 100%;
+    }
+    .panel .ptop{
+        justify-content: center;
+        height: 100px;
+        width: 100%;
+    }
+    .instructions{
+        width: 96%;
+        height: 65%;
+    }
+    .elem{
+        gap: 8px;
+        margin: 0 8px;
+    }
+    .elem .box{
+        height: 40px;
+        width: 50px;
+        font-size: 22px;
+        padding: 10px 18px;
+    }
+    .pbtm{
+        min-height: calc(100% - 100px);
+        padding: 17px 15px ;
+    }
+}
+@media (max-width:400px) {
+    .panel .ptop{
+        justify-content: space-between;
+        height: 100px;
+        width: 100%;
+        padding: 0 15px;
+    }
+    .instructions{
+        height: 85%;
+    }
+    .elem{
+        gap: 6px;
+        margin: 0 4px;
+    }
+    .elem .box{
+        height: 40px;
+        width: 40px;
+        font-size: 20px;
+        padding: 8px 16px;
+    }
+}
+@media (max-height:600px) {
+    .instructions{
+        height: 100%;
+        width: 100%;
+        font-size: 12px;
+        padding: 5px;
+    }
+    .instructions *{
+        margin: 5px;
+    }
+    .elem{
+        gap: 4px;
+        margin: 0 4px;
+    }
+    .elem .box{
+        height: 35px;
+        width: 30px;
+        font-size: 14px;
+        padding: 7px 14px;
+    }
+}
